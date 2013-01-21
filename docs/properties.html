@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>
+</title>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+
+<div class="header">
+<div class="title">CS Trüter</div>
+<div class="scriptName">PHP Calendar Documentation</div>
+<div class="version">version 1.0</div>
+</div><br/>
+
+<div class="body">
+
+<a href="index.html">Back</a>
+
+</div><br/>
+
+<div class="body">
+<b>Pre-Set the Calendar</b><br/><br/>
+<xmp>       $calendar = new Calendar("example","2006-1-1"); </xmp><br/>
+
+When we wish to give our calendar a default date, where it should start, we simply
+set it as our second parameter to our object's constructor.<br/><br/>
+
+The format is as follows, YYYY-MM-DD<br/><br/>
+
+<b>Styles</b><br/><br/>
+
+<xmp>$calendar = new Calendar("example");
+(1) $calendar->currentDateStyle = "currentDate";	
+(2) $calendar->selectedDateStyle = "selectedDate";	
+(3) $calendar->normalDateStyle = "normalDate";	
+(4) $calendar->navigateStyle = "navigateYear";	
+(5) $calendar->monthStyle = "month";			
+(6) $calendar->daysOfTheWeekStyle = "daysOfTheWeek";</xmp><br/>
+
+<b>Description</b></br></br>
+
+If you wish to use different styles for certain aspects or all aspects of the calendars, you
+can set it using these properties.<br/><br/>
+
+(1) Style for current date<br/>
+(2) Style for selected dates<br/>
+(3) Style for unselected dates<br/>
+(4) Style used in navigation "buttons"<br/>
+(5) Style used to display month<br/>
+(6) Styles used to display sun-mon<br/><br/>
+
+<b>Redirect from Calendar</b><br/><br/>
+<xmp>       $calendar = new Calendar("example"); 
+	(1) $calendar->redirect = "day.php";</xmp><br/>
+
+If you wish to redirect to a different page once the user selects a date, simply set the
+redirect property, to the name of the page you wish to go to.<br/><br/>
+</div>
+<div class="footer">
+&copy; 2006 CS Trüter <a href="http://www.cstruter.com">www.cstruter.com</a>
+</div>
+</body>
+
+</html>

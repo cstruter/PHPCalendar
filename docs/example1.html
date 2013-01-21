@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>
+</title>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+
+<div class="header">
+<div class="title">CS Trüter</div>
+<div class="scriptName">PHP Calendar Documentation</div>
+<div class="version">version 1.0</div>
+</div><br/>
+
+<div class="body">
+
+<a href="index.html">Back</a>
+
+</div><br/>
+
+<div class="body">
+<b>Example 1 - Simple Example</b><br/><br/>
+<xmp><html>
+<head>
+    <title>Calendar Example1</title>
+(1) <link rel="stylesheet" type="text/css" href="styles/calendar.css" />
+</head>
+<body>
+    <? 
+        (2) include "includes/PHP4/calendar.php"; 
+        (3) $calendar = new Calendar("example1"); 
+        (4) echo $calendar->Output();
+        (5) echo 'Value : '.$calendar->Value();
+    ?> 
+</body>
+</html></xmp>
+<br/>
+
+<b>Description</b><br/><br/>
+
+(1) Include the stylesheet needed to style the calendar.<br/>
+(2) Include the Calendar Class file into your page (PHP5 folder if you're using PHP 5).<br/>
+(3) Instantiate an object of that Calendar Class, and assign and ID via	the constructor.<br/>
+(4) Simply echo the Output method of the object wherever you need to place it.<br/>
+(5) Use the Value method of the object, to get the selected value.<br/><br/>
+</div>
+<div class="footer">
+&copy; 2006 CS Trüter <a href="http://www.cstruter.com">www.cstruter.com</a>
+</div>
+</body>
+
+</html>

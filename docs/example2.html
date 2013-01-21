@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>
+</title>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+
+<div class="header">
+<div class="title">CS Trüter</div>
+<div class="scriptName">PHP Calendar Documentation</div>
+<div class="version">version 1.0</div>
+</div><br/>
+
+<div class="body">
+
+<a href="index.html">Back</a>
+
+</div><br/>
+
+<div class="body">
+<b>Example 2 - Form Example</b><br/><br/>
+<xmp><html>
+<head>
+    <title>Calendar Example 2</title>
+
+    (1) <script language="javascript" src="js/calendar.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles/calendar.css" />
+</head>
+<body>
+    <form method="POST">
+       
+        <? 
+            include "includes/PHP4/calendar.php"; 
+            $calendar = new Calendar("example2"); 
+            (2) $calendar->inForm = true; 
+            echo $calendar->Output(); 
+        ?>
+        
+        <input type="submit" />
+    </form>
+</body>
+</html></xmp><br/>
+
+<b>Description</b><br/><br/>
+
+When containing the Calendar object inside a form, you'll need to do the following:
+<br/>
+(1) Include the javascript file called calendar.js (you'll find in the js folder), to your head tag, this file
+eliminates postbacks and server interaction<br/><br/>
+(2) You will need to set the inForm property to true, this tells the component, 
+that we're using it inside a form.<br/><br/>
+
+<b>More than one Calendar?</b><br/><br/>
+What happens when we want more than one calendar on a page? Well, we simply instantiate a second object
+and specify a different ID for that object - and we're ready for launch.<br/><br/>
+
+<b>DUH</b><br/><br/>
+When using the object inside a form, insure that you place it within the form tags, else you wont get any
+value back from your control.<br/><br>
+
+<b>Interesting</b><br/><br/>
+
+Its interesting to note, what happens to the Microsoft ASP.net calendar component (and 
+a few of the others) when one disables javascript, it stops functioning!<br/><br/>
+Luckily you wont have the problem here, when Javascript is disabled, the server
+intervenes, and the calendar keeps functioning.<br/>
+
+
+</div>
+<div class="footer">
+&copy; 2006 CS Trüter <a href="http://www.cstruter.com">www.cstruter.com</a>
+</div>
+
+</body>
+
+</html>
